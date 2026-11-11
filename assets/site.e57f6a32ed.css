@@ -271,32 +271,30 @@ strong { font-weight: var(--weight-semibold); }
 .hero .lead { max-width: 21rem; margin-top: var(--space-md); text-wrap: balance; }
 .hero-actions { display: grid; justify-items: center; gap: var(--space-sm); width: 100%; margin-top: calc(var(--space-lg) + var(--space-xs)); }
 .hero-actions .button { width: 100%; }
-/* While there is no store link: plain words, no border, fill or icon, so it cannot be taken for a button that does nothing. */
-.store-soon { display: flex; align-items: center; min-height: var(--space-xxl); font-size: var(--type-callout-size); line-height: var(--type-callout-line); letter-spacing: calc(var(--type-callout-tracking) + var(--greek-tracking)); font-weight: var(--type-callout-weight); }
 /* Apple's badge, as supplied: 40 px tall or more, a quarter of its height clear on every side, and never transformed, filtered, faded or animated. Only the focus ring is ours, outside the clear space. */
 .store-badge { display: block; margin-top: var(--space-sm); border-radius: var(--radius-block); }
 .store-badge img { display: block; height: var(--size-hit); width: auto; }
 .store-badge:focus-visible { outline-offset: var(--space-xs); border-radius: var(--radius-block); }
-.hero .hero-note { max-width: 21.5rem; font-size: var(--type-subhead-size); line-height: var(--type-subhead-line); letter-spacing: calc(var(--type-subhead-tracking) + var(--greek-tracking)); font-weight: var(--type-subhead-weight); color: var(--color-text-muted); text-wrap: balance; }
+/* While there is no store link the badge is a picture, not a link, and says when: plain words beside it, outside its clear space, with no border, fill or icon of their own, so the pair cannot be taken for a download that works. */
+.store-coming { display: flex; align-items: center; gap: var(--space-lg); }
+.store-when { font-size: var(--type-callout-size); line-height: var(--type-callout-line); letter-spacing: calc(var(--type-callout-tracking) + var(--greek-tracking)); font-weight: var(--weight-medium); white-space: nowrap; }
+.hero .hero-note { max-width: 21.5rem; margin-top: var(--space-md); font-size: var(--type-subhead-size); line-height: var(--type-subhead-line); letter-spacing: calc(var(--type-subhead-tracking) + var(--greek-tracking)); font-weight: var(--type-subhead-weight); color: var(--color-text-muted); text-wrap: balance; }
 /* Apple's credit line and the form's questions end on an even line too, never on one word. */
 .field > label:not(.check), .field > legend, .on-brand .credit { text-wrap: balance; }
-.has-badge .hero-note { margin-top: var(--space-md); }
 /* Her slot: what the screen leaves above the words. The art overflows it above and below (SEVI_CROP), into air of her own frame. She takes no tap, and breathes about her feet's line. */
-.hero-sevi { position: relative; grid-row: 1; align-self: end; height: clamp(11.475rem, calc(min(100vh, 64rem) - calc(18.4425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(11.475rem, calc(min(100svh, 64rem) - calc(18.4425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); aspect-ratio: 720 / 841.5; pointer-events: none; transform-origin: calc(var(--sevi-centre) * 100%) calc(var(--sevi-feet-slot) * 100%); }
-.has-badge .hero-sevi { height: clamp(11.475rem, calc(min(100vh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(11.475rem, calc(min(100svh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
+.hero-sevi { position: relative; grid-row: 1; align-self: end; height: clamp(11.475rem, calc(min(100vh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(11.475rem, calc(min(100svh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); aspect-ratio: 720 / 841.5; pointer-events: none; transform-origin: calc(var(--sevi-centre) * 100%) calc(var(--sevi-feet-slot) * 100%); }
 .hero-sevi .sevi { position: absolute; left: 0; top: -10.5882%; display: block; width: 100%; height: 117.6471%; max-width: none; }
 @media (max-width: 23rem) {
-  .hero-sevi { height: clamp(11.475rem, calc(min(100vh, 64rem) - calc(18.4425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - var(--type-subhead-size) * var(--type-subhead-line)), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(11.475rem, calc(min(100svh, 64rem) - calc(18.4425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - var(--type-subhead-size) * var(--type-subhead-line)), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
-  .has-badge .hero-sevi { height: clamp(11.475rem, calc(min(100vh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - var(--type-subhead-size) * var(--type-subhead-line)), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(11.475rem, calc(min(100svh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - var(--type-subhead-size) * var(--type-subhead-line)), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
+  .hero-sevi { height: clamp(11.475rem, calc(min(100vh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - var(--type-subhead-size) * var(--type-subhead-line)), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(11.475rem, calc(min(100svh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - var(--type-subhead-size) * var(--type-subhead-line)), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
 }
 /* The narrowest phones: the lead a step smaller, so it keeps to two lines, and the note as running text (a sentence a line would make four). */
 @media (max-width: 22.5rem) {
   .hero .lead { font-size: var(--type-body-size); line-height: var(--type-body-line); letter-spacing: calc(var(--type-body-tracking) + var(--greek-tracking)); font-weight: var(--type-body-weight); }
   .hero-note .line { display: inline; }
 }
-/* A short phone with Apple's badge: she gives a little more, so the note stays on the first screen. */
+/* A short phone: she gives a little more, so the note stays on the first screen. */
 @media (max-width: 39.98rem) and (max-height: 36rem) {
-  .has-badge .hero-sevi { height: clamp(9.35rem, calc(min(100vh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(9.35rem, calc(min(100svh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
+  .hero-sevi { height: clamp(9.35rem, calc(min(100vh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(9.35rem, calc(min(100svh, 64rem) - calc(20.9425rem + 2.2353 * clamp(2rem, 10.2vw, 3.5rem)) - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
 }
 
 .section { padding-block: calc(var(--space-xxxl) + var(--space-xxl)); scroll-margin-top: var(--space-lg); }
@@ -411,8 +409,7 @@ strong { font-weight: var(--weight-semibold); }
   .hero h1 { font-size: 3.5rem; }
   .hero-words { max-width: 36rem; }
   .hero .lead { max-width: 24rem; }
-  .hero-sevi { height: clamp(15.3rem, calc(min(100vh, 64rem) - 27rem - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(15.3rem, calc(min(100svh, 64rem) - 27rem - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
-  .has-badge .hero-sevi { height: clamp(15.3rem, calc(min(100vh, 64rem) - 29.5rem - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(15.3rem, calc(min(100svh, 64rem) - 29.5rem - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
+  .hero-sevi { height: clamp(15.3rem, calc(min(100vh, 64rem) - 29.5rem - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); height: clamp(15.3rem, calc(min(100svh, 64rem) - 29.5rem - 0rem), min(calc((100vw - 2 * var(--gutter)) * 1.1688), 34rem)); }
   .section { padding-block: calc(2 * var(--space-xxxl)); }
   /* The capture beside the words, centred on each other. */
   .how .wrap { grid-template-columns: auto minmax(0, 1fr); gap: calc(2 * var(--space-xxl)); align-items: center; }
@@ -433,14 +430,14 @@ strong { font-weight: var(--weight-semibold); }
   .hero h1 { font-size: var(--type-display-size); line-height: var(--type-display-line); letter-spacing: calc(var(--type-display-tracking) + var(--greek-tracking)); font-weight: var(--type-display-weight); font-size: clamp(3.5rem, 5.6vw, 4.5rem); line-height: 1.1; }
   :lang(el) .hero h1 { font-size: clamp(3rem, 4.6vw, 3.75rem); }
   .hero .lead { max-width: 27rem; margin-top: calc(var(--space-lg) + var(--space-xs)); }
-  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-xl); width: auto; margin-top: var(--space-xxl); }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-lg) var(--space-xl); width: auto; margin-top: var(--space-xxl); }
   .hero-actions .button { width: auto; min-width: 0; }
-  .store-soon { min-height: var(--size-button); font-size: var(--type-body-size); line-height: var(--type-body-line); letter-spacing: calc(var(--type-body-tracking) + var(--greek-tracking)); font-weight: var(--weight-medium); }
   .store-badge { margin-top: 0; }
   .store-badge img { height: var(--size-button); }
-  .hero .hero-note, .has-badge .hero-note { max-width: 27rem; margin-top: var(--space-lg); }
+  .store-when { font-size: var(--type-body-size); line-height: var(--type-body-line); letter-spacing: calc(var(--type-body-tracking) + var(--greek-tracking)); font-weight: var(--weight-medium); }
+  .hero .hero-note { max-width: 27rem; margin-top: var(--space-lg); }
   /* Beside the words she is the whole art, uncropped. */
-  .hero-sevi, .has-badge .hero-sevi { grid-row: 1; grid-column: 2; align-self: center; height: min(80vh, calc(min(100vh, 64rem) - 2 * var(--home-header)), 44rem, 54vw); height: min(80svh, calc(min(100svh, 64rem) - 2 * var(--home-header)), 44rem, 54vw); aspect-ratio: 720 / 990; transform-origin: calc(var(--sevi-centre) * 100%) calc(var(--sevi-feet) * 100%); }
+  .hero-sevi { grid-row: 1; grid-column: 2; align-self: center; height: min(80vh, calc(min(100vh, 64rem) - 2 * var(--home-header)), 44rem, 54vw); height: min(80svh, calc(min(100svh, 64rem) - 2 * var(--home-header)), 44rem, 54vw); aspect-ratio: 720 / 990; transform-origin: calc(var(--sevi-centre) * 100%) calc(var(--sevi-feet) * 100%); }
   .hero-sevi .sevi { top: 0; height: 100%; }
 }
 @media (min-width: 40rem) and (max-height: 30rem) {
@@ -449,11 +446,12 @@ strong { font-weight: var(--weight-semibold); }
   .hero .wrap { column-gap: var(--space-xl); padding-bottom: var(--space-sm); }
   .hero h1, :lang(el) .hero h1 { font-size: var(--type-hero-size); line-height: var(--type-hero-line); letter-spacing: calc(var(--type-hero-tracking) + var(--greek-tracking)); font-weight: var(--type-hero-weight); font-size: 2rem; }
   .hero .lead { margin-top: var(--space-sm); font-size: var(--type-body-size); line-height: var(--type-body-line); letter-spacing: calc(var(--type-body-tracking) + var(--greek-tracking)); font-weight: var(--type-body-weight); }
-  .hero-actions { gap: var(--space-xs) var(--space-lg); margin-top: var(--space-md); }
-  .store-soon { min-height: var(--space-xxl); font-size: var(--type-callout-size); line-height: var(--type-callout-line); letter-spacing: calc(var(--type-callout-tracking) + var(--greek-tracking)); font-weight: var(--type-callout-weight); }
+  /* (Where the badge wraps under the button it still keeps a quarter of its height clear above and below.) */
+  .hero-actions { gap: var(--space-md) var(--space-lg); margin-top: var(--space-md); }
   .store-badge img { height: var(--size-hit); }
-  .hero .hero-note, .has-badge .hero-note { margin-top: var(--space-sm); }
-  .hero-sevi, .has-badge .hero-sevi { height: min(calc(100vh - var(--home-header) - var(--space-sm)), 40vw); height: min(calc(100svh - var(--home-header) - var(--space-sm)), 40vw); }
+  .store-when { font-size: var(--type-callout-size); line-height: var(--type-callout-line); letter-spacing: calc(var(--type-callout-tracking) + var(--greek-tracking)); font-weight: var(--weight-medium); }
+  .hero .hero-note { margin-top: var(--space-md); }
+  .hero-sevi { height: min(calc(100vh - var(--home-header) - var(--space-sm)), 40vw); height: min(calc(100svh - var(--home-header) - var(--space-sm)), 40vw); }
 }
 @media (min-width: 64rem) {
   .section { padding-block: calc(2 * var(--space-xxxl) + var(--space-xxl)); }
@@ -545,14 +543,21 @@ strong { font-weight: var(--weight-semibold); }
 @keyframes turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @media screen and (prefers-reduced-motion: no-preference) {
   /* The one entrance: the words settle. SEVi's own entrance is her wave (her art, played by the page's small script). */
-  /* Each of the words rises, never their wrapper: Apple's badge sits among them and is never moved or faded. Nothing is held once it has landed (a held transform would undo the button's press). */
-  .hero-words > h1, .hero-words > .lead, .hero-words > .hero-note, .hero-actions > .button, .hero-actions > .store-soon { animation: rise var(--landing-enter) var(--ease-out) backwards; }
+  /* Each of the words rises, never their wrapper: Apple's badge sits among them and is never moved or faded (nor is the span it stands in: only the words beside it rise). Nothing is held once it has landed (a held transform would undo the button's press). */
+  .hero-words > h1, .hero-words > .lead, .hero-words > .hero-note, .hero-actions > .button, .store-when { animation: rise var(--landing-enter) var(--ease-out) backwards; }
   /* Her idle life between waves: a breath, a rest, a counted number of times; it waits while a wave plays. Her slot breathes, so her poster and her wave move as one. */
   .hero-sevi { animation: breath 5100ms ease-in-out 3400ms 6; }
   .hero-sevi.is-playing { animation-play-state: paused; }
-  /* A moment's first and last frames are her poster's pose, drawn softer: the script lays the crisp poster over the swap and lets it fade, so her sharpness never snaps. */
-  .sevi-veil { transition: opacity var(--motion-fast) linear; }
-  .sevi-veil.is-off { opacity: 0; }
+  /* A moment's first frame is her poster's pose, a little apart from the poster itself (one comes from the kit's still, the other from its animation), and its last frame is near it or not (data-cut). At each swap the script adds a copy of the poster (the veil) to her box and names the state there: is-veiled (the veil stands in for the image) and is-fading (the two trade places in a fade), so no frame is ever empty and nothing snaps. A veil merely laid over the image draws her soft shadow and the edge of her fur twice, and her shadow reads darker for a moment at both ends of every wave: that is what a browser without plus-lighter still gets (the two rules below). */
+  .is-fading > .sevi-veil { transition: opacity var(--motion-fast) linear; }
+  .is-fading:not(.is-veiled) > .sevi-veil { opacity: 0; }
+  /* Where the browser can add two pictures (plus-lighter, in a group of their own), the trade is an exact cross-fade: the image is hidden while the veil stands in, the veil's share and the image's always sum to one (linear, or they would not), and nothing is drawn twice. */
+  @supports (mix-blend-mode: plus-lighter) {
+    .hero-sevi, .done-sevi { isolation: isolate; }
+    .sevi-veil { mix-blend-mode: plus-lighter; }
+    .is-fading > .sevi { transition: opacity var(--motion-fast) linear; }
+    .is-veiled > .sevi:not(.sevi-veil) { opacity: 0; }
+  }
   /* Feedback: a press, a choice, a field, the tick. */
   .skip, .button, .choice { transition: background-color var(--motion-fast) var(--ease-out), border-color var(--motion-fast) var(--ease-out), box-shadow var(--motion-fast) var(--ease-out), transform var(--motion-press) var(--ease-out); }
   .landing .button:active { transform: scale(0.98); }
